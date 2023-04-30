@@ -1,0 +1,29 @@
+h1 {
+  border-style: dashed;
+  border-width: 11px;
+  /* border: dashed blue; */
+  border-color: green;
+}
+
+.top-div {
+  background-color: green;
+  width: 200px;
+  height: 100px;
+}
+
+.inner-div {
+  background-color: goldenrod;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+span {
+  color: red;
+  background-color: aqua;
+  margin: 3rem;
+}
+
+body {
+  color: white;
+  background-color: darkgrey;
+}
