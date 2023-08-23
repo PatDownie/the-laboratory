@@ -1,8 +1,11 @@
 h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+
   border-style: dashed;
-  border-width: 11px;
-  /* border: dashed blue; */
-  border-color: green;
+  border-width: 3px;
+  margin: 5px;
 }
 
 .top-div {
@@ -26,4 +29,127 @@ span {
 body {
   color: white;
   background-color: darkgrey;
+}
+
+.animationtest1 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation-name: test1;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.animationtest2 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+@keyframes test1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.flashyHeaderContainer {
+  position: relative;
+  padding: 10px;
+  margin: 1rem;
+  /* background-color: aqua; */
+}
+
+.flashyHeader {
+  font-size: 5rem;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.flashyShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #0eaa1b;
+  z-index: -1;
+
+  animation: flashy1 2s steps(1) infinite, flashy2 0.8s steps(1) infinite, flashy3 1s steps(1) infinite;
+}
+
+@keyframes flashy1 {
+  0% {
+    color: #ffbf00;
+  }
+  10% {
+    color: #e83f6f;
+  }
+  20% {
+    color: #2274a5;
+  }
+  30% {
+    color: #60e464;
+  }
+  40% {
+    color: #ff52e5;
+  }
+  50% {
+    color: #1f1c1e;
+  }
+  60% {
+    color: #f3ff52;
+  }
+  70% {
+    color: #ec6029;
+  }
+  80% {
+    color: #0eaa1b;
+  }
+  90% {
+    color: #958af3;
+  }
+  100% {
+    color: #ffbf00;
+  }
+}
+
+@keyframes flashy2 {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: 20px;
+  }
+  50% {
+    left: 20px;
+  }
+  75% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes flashy3 {
+  0% {
+    top: 0;
+  }
+  20% {
+    top: 20px;
+  }
+  40% {
+    top: 20px;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: 20px;
+  }
+  100% {
+    top: 0;
+  }
 }
