@@ -87,7 +87,6 @@ body {
 
 .contentContainer {
   margin: 0 180px;
-  /* background-color: blueviolet; */
   height: 100vh;
 
   display: flex;
@@ -124,6 +123,9 @@ p {
   color: #913a11;
   z-index: -1;
   opacity: 0;
+  transition: 0.5s;
+  animation: bigLinkAnimation2 2s ease-in-out infinite;
+  animation-delay: 0s;
 }
 
 .bigLink3 {
@@ -131,48 +133,24 @@ p {
   color: #e0b967;
   z-index: -2;
   opacity: 0;
-}
-
-.bigLinkContainer:hover p {
-  animation-name: bigLinkAnimation1;
-  animation-duration: 0s;
-  animation-timing-function: steps(1);
-  animation-fill-mode: forwards;
-}
-
-.bigLinkContainer:hover .bigLink2 {
-  animation-delay: 0s;
-}
-
-.bigLinkContainer:hover .bigLink3 {
+  transition: 0.5s;
+  animation: bigLinkAnimation2 2s ease-in-out infinite;
   animation-delay: 0.3s;
 }
 
-@keyframes bigLinkAnimation1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.bigLinkContainer:hover .bigLink1 {
-  /* animation-name: bigLinkAnimation2;
-  animation-duration: 1s;
-  animation-timing-function: steps(1);
-  animation-iteration-count: infinite;
-  animation-delay: 0.2s; */
+.bigLinkContainer:hover .bigLink2,
+.bigLinkContainer:hover .bigLink3 {
+  opacity: 1;
 }
 
 @keyframes bigLinkAnimation2 {
   0% {
-    color: #202020;
+    translate: -5px -5px;
   }
   50% {
-    color: #f8f0e5;
+    translate: 5px 5px;
   }
   100% {
-    color: #202020;
+    translate: -5px -5px;
   }
 }
