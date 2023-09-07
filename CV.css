@@ -119,38 +119,36 @@ p {
 }
 
 .bigLink2 {
-  transform: translate(10px, 10px);
   color: #913a11;
   z-index: -1;
-  opacity: 0;
   transition: 0.5s;
-  animation: bigLinkAnimation2 2s ease-in-out infinite;
-  animation-delay: 0s;
 }
 
 .bigLink3 {
-  transform: translate(20px, 20px);
   color: #e0b967;
   z-index: -2;
-  opacity: 0;
-  transition: 0.5s;
-  animation: bigLinkAnimation2 2s ease-in-out infinite;
-  animation-delay: 0.3s;
+  transition: 0.7s;
 }
 
-.bigLinkContainer:hover .bigLink2,
+.bigLinkContainer:hover .bigLink2 {
+  transform: translate(10px, 10px);
+}
 .bigLinkContainer:hover .bigLink3 {
-  opacity: 1;
+  transform: translate(20px, 20px);
 }
 
-@keyframes bigLinkAnimation2 {
+.pulsing {
+  /* animation: linkPulse 5s ease-in-out infinite; */
+}
+
+@keyframes linkPulse {
   0% {
-    translate: -5px -5px;
+    translate: 0px 0px;
   }
   50% {
-    translate: 5px 5px;
+    translate: 100px 100px;
   }
   100% {
-    translate: -5px -5px;
+    translate: 0px 0px;
   }
 }
