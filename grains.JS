@@ -11,7 +11,7 @@ function moveGradient(event) {
 
   console.log(`x: ${event.x} y: ${event.y} screen size: ${window.innerWidth} x ${window.innerHeight} cursorXPercentage: ${cursorXPercentage} cursorYPercentage: ${cursorYPercentage}`);
 
-  gradient.style.background = "radial-gradient(circle 200px at " + cursorXPercentage + "% " + cursorYPercentage + "%, #ac3931, #000000)";
+  gradient.style.background = "radial-gradient(circle 220px at " + cursorXPercentage + "% " + cursorYPercentage + "%, #ac3931, #000000)";
 
   gradient2.style.background = "radial-gradient(circle 140px at " + cursorXPercentage + "% " + cursorYPercentage + "%, #ac3931, #00000000)";
 }

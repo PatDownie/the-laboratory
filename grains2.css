@@ -1,0 +1,26 @@
+body {
+  /* background-color: #ffffff; */
+}
+
+#isolate {
+  isolation: isolate;
+}
+
+#gradientContainer {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle 400px at center, #00000000, #000000), url(./images/noise.svg);
+  filter: contrast(170%) brightness(1000%);
+  /* mix-blend-mode: screen; */
+}
+
+#gradientContainer2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: #ac3931;
+  mix-blend-mode: multiply;
+}
