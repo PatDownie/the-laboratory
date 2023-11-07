@@ -1,0 +1,26 @@
+#gradientContainer {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle 300px at center, #ac3931, #000000);
+}
+
+#grainContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/noise_v2.png);
+  opacity: 0.8;
+
+  /* background-color: aqua; */
+}
+
+#gradientContainer2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle 120px at center, #ac3931, #00000000);
+}

@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-h1 {
+.welcome {
   font-size: 3rem;
   font-weight: 900;
   text-align: center;
@@ -174,4 +174,25 @@ body {
   100% {
     top: 0;
   }
+}
+
+.divTestDiv {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  margin: 50px;
+
+  background-color: #ec6029;
+}
+
+.divTestDiv {
+  font-size: 7rem;
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 900;
+
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  background-color: #60e4643a;
 }
