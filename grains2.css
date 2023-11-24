@@ -1,5 +1,6 @@
 body {
   /* background-color: #ffffff; */
+  /* background-color: black; */
 }
 
 #isolate {
@@ -9,9 +10,8 @@ body {
 #gradientContainer {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle 400px at center, #00000000, #000000), url(./images/noise.svg);
+  background: radial-gradient(circle 400px at center, #0000007a, #000000b9), url(./images/noise.svg);
   filter: contrast(170%) brightness(1000%);
-  /* mix-blend-mode: screen; */
 }
 
 #gradientContainer2 {

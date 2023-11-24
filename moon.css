@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+}
+
+#pageContainer {
+  position: relative;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#grainContainer {
+  z-index: -2;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transition: 0.8s;
+
+  background: radial-gradient(circle 300px at center, #00000000, #000000), url(./images/noise.svg);
+  filter: contrast(170%) brightness(1000%);
+}
+
+#backgroundColourContainer {
+  z-index: -1;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transition: 0.8s;
+  /* opacity: 0; */
+
+  background-color: #000000;
+}
+#moondiv:hover + #backgroundColourContainer {
+  opacity: 0;
+}
+
+#moondiv {
+  background-color: white;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  filter: blur(6px);
+  transition: 0.8s;
+}
+#moondiv:hover {
+  cursor: pointer;
+  filter: blur(0px);
+}
+
+.moontext {
+  font-family: "Xanh Mono", monospace;
+  font-size: 7rem;
+  letter-spacing: 0.5rem;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  user-select: none;
+
+  opacity: 0;
+}
+#moontext4 {
+  opacity: 0;
+}
+
+.rgbmoontext {
+  filter: blur(7px);
+  transition: 0.6s;
+}
+
+#moontext1 {
+  color: rgba(200, 0, 0, 0.6);
+  translate: 15px 15px;
+}
+
+#moontext2 {
+  color: rgba(0, 200, 0, 0.6);
+  translate: -15px -15px;
+}
+
+#moontext3 {
+  color: rgba(0, 0, 200, 0.6);
+  translate: -15px 15px;
+}
+
+#moondiv:hover .rgbmoontext {
+  opacity: 1;
+  filter: blur(0px);
+  translate: 0px 0px;
+}
+
+#moondiv:hover #moontext4 {
+  color: black;
+  opacity: 1;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
