@@ -1,0 +1,47 @@
+* {
+  /* box-sizing: border-box; */
+}
+
+#pageContainer {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bigMouseDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 19px;
+
+  z-index: -2;
+
+  opacity: 0;
+}
+
+#bigMouse {
+  transform: scale(1);
+  height: 100%;
+}
+
+#hoverDiv {
+  width: 20%;
+  height: 20%;
+
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#hoverDiv:hover {
+  border-color: red;
+}
+
+#hoverDiv:hover + #bigMouseDiv {
+  opacity: 1;
+}
