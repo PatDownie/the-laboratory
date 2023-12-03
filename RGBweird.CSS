@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+#pageContainer {
+  background-color: black;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#textContainer {
+  position: relative;
+  text-align: center;
+}
+
+.text {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: sans-serif;
+
+  user-select: none;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#R {
+  color: rgb(255, 0, 0);
+  mix-blend-mode: screen;
+  transform: translate(0px, 0px);
+  filter: blur(0px);
+}
+
+#G {
+  color: rgb(0, 255, 0);
+  mix-blend-mode: screen;
+  transform: translate(0px, 0px);
+  filter: blur(0px);
+}
+
+#B {
+  color: blue;
+  mix-blend-mode: screen;
+  transform: translate(0px, 0px);
+  filter: blur(0px);
+}
