@@ -1,0 +1,38 @@
+#pageContainer {
+  min-height: 100vh;
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#textContainer {
+  color: white;
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+#textContainer p {
+  font-size: 3rem;
+}
+
+#textContainer p span {
+  font-size: 3rem;
+}
+
+.R {
+  color: red;
+  mix-blend-mode: screen;
+}
+
+.G {
+  color: rgb(0, 255, 0);
+  mix-blend-mode: screen;
+}
+
+.B {
+  color: blue;
+  mix-blend-mode: screen;
+}
