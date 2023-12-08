@@ -20,6 +20,7 @@
 
 #textContainer p span {
   font-size: 3rem;
+  display: inline-block;
 }
 
 .R {
