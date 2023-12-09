@@ -1,7 +1,7 @@
 const RGBArray = ["R", "G", "B"];
 
 function randomDirection() {
-  const number = Math.floor(40 + Math.random() * 20);
+  const number = Math.floor(15 + Math.random() * 10);
   const posOrNeg = Math.random() < 0.5 ? -1 : 1;
   return number * posOrNeg;
 }
@@ -45,7 +45,7 @@ function moveLetters(event) {
     elementYPos = elementRectangle.top + elementRectangle.height / 2;
     cursorXdistance = Math.abs(elementXPos - cursorXPosition);
     cursorYdistance = Math.abs(elementYPos - cursorYPosition);
-    cursorTotalDistance = 1 - Math.min(Math.sqrt(cursorXdistance ** 2 + cursorYdistance ** 2), 150) / 150;
+    cursorTotalDistance = 1 - Math.min(Math.sqrt(cursorXdistance ** 2 + cursorYdistance ** 2), 200) / 200;
 
     letterElement.style.translate = `${letterArray2[index][2][0] * cursorTotalDistance}px ${letterArray2[index][2][1] * cursorTotalDistance}px`;
     // letterElement.style.filter = `blur(${Math.abs(letterArray2[index][2][0]) * cursorTotalDistance}px)`;
