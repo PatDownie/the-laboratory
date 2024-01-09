@@ -1,6 +1,6 @@
 #pageContainer {
   min-height: 100vh;
-  background-color: black;
+  background-color: #466365;
 
   display: flex;
   justify-content: center;
@@ -19,6 +19,7 @@
   overflow: hidden;
 
   padding-right: 30px;
+  margin-top: -30px;
 }
 
 .leftRow {
@@ -48,6 +49,7 @@
   overflow: hidden;
 
   padding-left: 30px;
+  margin-top: -30px;
 }
 
 .rightRow {
@@ -70,7 +72,7 @@
   height: 150px;
   width: 150px;
   flex-shrink: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: #eaeaea;
 
   border-radius: 100% 0px;
   transform: rotate(45deg);
@@ -83,7 +85,7 @@
 }
 
 .pupil {
-  background-color: green;
+  background-color: #d5a021;
   width: 75px;
   height: 75px;
 
@@ -94,9 +96,9 @@
 
 .blinking {
   animation-name: scleraBlink;
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
   animation-iteration-count: 1;
-  animation-timing-function: linear;
+  animation-timing-function: ease-out;
 }
 
 @keyframes scleraBlink {

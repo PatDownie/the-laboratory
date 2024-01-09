@@ -1,6 +1,3 @@
-const leftContainer = document.getElementById("leftContainer");
-const rightContainer = document.getElementById("rightContainer");
-
 const eyes = document.getElementsByClassName("eye");
 for (let i = 0; i < eyes.length; i++) eyes[i].setAttribute("id", `eye${i}`);
 const pupils = document.getElementsByClassName("pupil");
