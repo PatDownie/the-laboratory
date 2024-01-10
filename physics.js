@@ -34,18 +34,18 @@ let boxNextY = 0;
 let boxNextX = 0;
 
 const collisionDampening = 1;
-const gravity = 1;
+const gravity = 1.3;
 
 function momentum() {
   if (boxIsFree === true) {
     if (boxCurrentY <= 0 || boxCurrentY >= window.innerHeight - 100) {
-      boxNextY = boxCurrentY - (boxCurrentY - boxPreviousY) * collisionDampening;
+      boxNextY = boxCurrentY - (boxCurrentY - boxPreviousY);
       bonkSound.cloneNode().play();
     } else {
-      boxNextY = boxCurrentY + (boxCurrentY - boxPreviousY);
+      boxNextY = boxCurrentY + (boxCurrentY - boxPreviousY) + gravity;
     }
     if (boxCurrentX <= 0 || boxCurrentX >= window.innerWidth - 100) {
-      boxNextX = boxCurrentX - (boxCurrentX - boxPreviousX) * collisionDampening;
+      boxNextX = boxCurrentX - (boxCurrentX - boxPreviousX);
       bonkSound.cloneNode().play();
     } else {
       boxNextX = boxCurrentX + (boxCurrentX - boxPreviousX);
@@ -56,6 +56,7 @@ function momentum() {
     boxPreviousX = boxCurrentX;
     boxCurrentY = boxNextY;
     boxCurrentX = boxNextX;
+    // console.log(`boxPreviousY = ${boxPreviousY} boxcurrentY = ${boxCurrentY} boxNextY = ${boxNextY}`);
   } else {
     boxPreviousY = boxCurrentY;
     boxPreviousX = boxCurrentX;
