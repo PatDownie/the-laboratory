@@ -1,11 +1,13 @@
 #pageContainer {
   height: 100vh;
+  background-color: rgb(233, 215, 166);
 }
 
 #physBody {
   background-color: red;
   width: 100px;
   height: 100px;
+  border-radius: 50%;
 
   position: fixed;
   top: 100px;

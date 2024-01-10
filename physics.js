@@ -33,19 +33,23 @@ function drag(event) {
 let boxNextY = 0;
 let boxNextX = 0;
 
-const collisionDampening = 1;
+const collisionDampening = 0.9;
 const gravity = 1.3;
 
 function momentum() {
   if (boxIsFree === true) {
     if (boxCurrentY <= 0 || boxCurrentY >= window.innerHeight - 100) {
-      boxNextY = boxCurrentY - (boxCurrentY - boxPreviousY);
+      // boxNextY = boxCurrentY - (boxCurrentY - boxPreviousY) * collisionDampening;
+      boxNextY = Math.min(Math.max(boxCurrentY, 0), window.innerHeight - 100) - (boxCurrentY - boxPreviousY) * collisionDampening;
+      boxCurrentY = Math.min(Math.max(boxCurrentY, 0), window.innerHeight - 100);
       bonkSound.cloneNode().play();
     } else {
       boxNextY = boxCurrentY + (boxCurrentY - boxPreviousY) + gravity;
     }
     if (boxCurrentX <= 0 || boxCurrentX >= window.innerWidth - 100) {
-      boxNextX = boxCurrentX - (boxCurrentX - boxPreviousX);
+      // boxNextX = boxCurrentX - (boxCurrentX - boxPreviousX) * collisionDampening;
+      boxNextX = Math.min(Math.max(boxCurrentX, 0), window.innerWidth - 100) - (boxCurrentX - boxPreviousX) * collisionDampening;
+      boxCurrentX = Math.min(Math.max(boxCurrentX, 0), window.innerWidth - 100);
       bonkSound.cloneNode().play();
     } else {
       boxNextX = boxCurrentX + (boxCurrentX - boxPreviousX);
@@ -56,7 +60,7 @@ function momentum() {
     boxPreviousX = boxCurrentX;
     boxCurrentY = boxNextY;
     boxCurrentX = boxNextX;
-    // console.log(`boxPreviousY = ${boxPreviousY} boxcurrentY = ${boxCurrentY} boxNextY = ${boxNextY}`);
+    console.log(`boxPreviousY = ${boxPreviousY} boxcurrentY = ${boxCurrentY} boxNextY = ${boxNextY}`);
   } else {
     boxPreviousY = boxCurrentY;
     boxPreviousX = boxCurrentX;
